@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <title>NeoDialer PWA</title>
+</head>
+<body>
+    <div class="dialer-container">
+        <div class="display">
+            <span id="phone-number"></span>
+        </div>
+        <div class="keypad">
+            <button class="btn" onclick="press('1')">1</button>
+            <button class="btn" onclick="press('2')">2</button>
+            <button class="btn" onclick="press('3')">3</button>
+            <button class="btn" onclick="press('4')">4</button>
+            <button class="btn" onclick="press('5')">5</button>
+            <button class="btn" onclick="press('6')">6</button>
+            <button class="btn" onclick="press('7')">7</button>
+            <button class="btn" onclick="press('8')">8</button>
+            <button class="btn" onclick="press('9')">9</button>
+            <button class="btn" onclick="press('*')">*</button>
+            <button class="btn" onclick="press('0')">0</button>
+            <button class="btn" onclick="press('#')">#</button>
+        </div>
+        <div class="actions">
+            <button class="btn call-btn" onclick="makeCall()">📞</button>
+            <button class="btn del-btn" onclick="backspace()">⌫</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
