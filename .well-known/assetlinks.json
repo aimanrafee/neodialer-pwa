@@ -2,7 +2,7 @@
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target": {
     "namespace": "android_app",
-    "package_name": "com.aimanrafee.amalan_hidupku",
-    "sha256_cert_fingerprints": ["E8:BD:C6:D7:8F:6D:FA:8D:01:8B:9E:06:A2:2E:01:49:BE:20:DA:7B:56:92:5E:AE:16:E2:85:67:07:C2:C2:A2"]
+    "package_name": "com.aimanrafee.neodialer",
+    "sha256_cert_fingerprints": ["33:62:30:73:C6:13:3B:CB:CC:9E:7E:9D:8D:7D:58:41:99:5D:8B:BD:E5:5D:69:A5:34:D5:5B:90:1F:5B:98:C9"]
   }
 }]
