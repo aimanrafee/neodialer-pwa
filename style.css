@@ -10,33 +10,41 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .dialer-container {
     padding: 30px;
-    border-radius: 50px;
+    border-radius: 40px;
     background: var(--bg-color);
-    box-shadow: 20px 20px 60px var(--shadow-dark), -20px -20px 60px var(--shadow-light);
+    box-shadow: 20px 20px 60px var(--shadow-dark), 
+                -20px -20px 60px var(--shadow-light);
+    width: 280px; /* Saiz tetap supaya nampak macam phone */
 }
 
 .display {
-    height: 60px;
+    height: 70px;
     margin-bottom: 30px;
-    border-radius: 10px;
-    background: inset 6px 6px 12px var(--shadow-dark), inset -6px -6px 12px var(--shadow-light);
+    border-radius: 15px;
+    /* Dibetulkan: CSS inset shadow perlukan sintaks 'inset' di depan */
+    background: var(--bg-color);
+    box-shadow: inset 6px 6px 12px var(--shadow-dark), 
+                inset -6px -6px 12px var(--shadow-light);
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding: 0 20px;
-    font-size: 24px;
+    font-size: 28px;
     color: #444;
+    overflow: hidden;
 }
 
 .keypad {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    justify-items: center; /* Pastikan butang duduk tengah grid */
 }
 
 .btn {
@@ -45,17 +53,36 @@ body {
     border-radius: 50%;
     border: none;
     background: var(--bg-color);
-    box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
+    box-shadow: 6px 6px 12px var(--shadow-dark), 
+                -6px -6px 12px var(--shadow-light);
     font-size: 20px;
     font-weight: bold;
+    color: #444;
     cursor: pointer;
     transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
 }
 
 .btn:active {
-    box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
-    transform: scale(0.98);
+    box-shadow: inset 4px 4px 8px var(--shadow-dark), 
+                inset -4px -4px 8px var(--shadow-light);
+    transform: scale(0.95);
 }
 
-.call-btn { color: #28a745; }
-.del-btn { color: #dc3545; }
+/* Butang khusus */
+.call-btn { 
+    color: #28a745; 
+}
+
+.del-btn { 
+    color: #dc3545; 
+    font-size: 18px;
+}
+
+/* Memastikan butang * dan # juga ada warna yang konsisten */
+.btn-special {
+    color: #666;
+}
