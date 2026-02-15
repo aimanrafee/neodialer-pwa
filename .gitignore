@@ -1,0 +1,11 @@
+# OS Metadata
+.DS_Store
+Thumbs.db
+
+# IDE/Editor
+.vscode/
+.idea/
+
+# Node (Jika anda tambah build tools nanti)
+node_modules/
+dist/
