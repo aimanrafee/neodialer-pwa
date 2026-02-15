@@ -2,7 +2,6 @@
     --bg-color: #e0e5ec;
     --shadow-dark: #a3b1c6;
     --shadow-light: #ffffff;
-    --text-color: #444;
 }
 
 body {
@@ -12,9 +11,8 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    /* Mengelakkan scrolling yang tidak perlu pada mobile */
-    overflow: hidden; 
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    overflow: hidden;
 }
 
 .dialer-container {
@@ -23,39 +21,29 @@ body {
     background: var(--bg-color);
     box-shadow: 20px 20px 60px var(--shadow-dark), 
                 -20px -20px 60px var(--shadow-light);
-    width: 320px; /* Lebar optimum untuk semua skrin */
-    max-width: 90vw;
+    width: 320px;
     box-sizing: border-box;
 }
 
+/* BAHAGIAN DISPLAY YANG DIKEMASKINI: Kotak dibuang */
 .display {
-    height: 70px;
-    margin-bottom: 30px;
-    border-radius: 20px;
-    background: var(--bg-color);
-    box-shadow: inset 6px 6px 12px var(--shadow-dark), 
-                inset -6px -6px 12px var(--shadow-light);
+    height: 80px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding: 0 25px;
-    font-size: 32px;
-    color: var(--text-color);
-    overflow-x: auto; /* Membenarkan scroll jika nombor terlalu panjang */
-    white-space: nowrap;
-}
-
-/* Scrollbar halus untuk paparan nombor */
-.display::-webkit-scrollbar {
-    display: none;
+    justify-content: center; /* Nombor duduk tengah */
+    font-size: 36px; /* Saiz nombor lebih besar */
+    font-weight: 500;
+    color: #333;
+    overflow: hidden;
+    text-align: center;
 }
 
 .keypad {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tiga lajur tetap */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     justify-items: center;
-    align-items: center;
 }
 
 .btn {
@@ -67,48 +55,25 @@ body {
     box-shadow: 6px 6px 12px var(--shadow-dark), 
                 -6px -6px 12px var(--shadow-light);
     font-size: 22px;
-    font-weight: 600;
-    color: var(--text-color);
+    font-weight: bold;
+    color: #444;
     cursor: pointer;
     transition: all 0.2s ease;
     display: flex;
     justify-content: center;
     align-items: center;
-    outline: none;
-    /* Menghilangkan highlight biru semasa touch di mobile */
     -webkit-tap-highlight-color: transparent;
 }
 
 .btn:active {
     box-shadow: inset 4px 4px 8px var(--shadow-dark), 
                 inset -4px -4px 8px var(--shadow-light);
-    transform: scale(0.96);
+    transform: scale(0.95);
 }
 
-/* Memastikan elemen kosong (spacer) mengambil ruang yang sama */
 .spacer {
     width: 70px;
-    height: 70px;
 }
 
-.call-btn { 
-    color: #28a745; 
-    font-size: 24px;
-}
-
-.del-btn { 
-    color: #dc3545; 
-    font-size: 20px;
-}
-
-.btn-special {
-    color: #666;
-}
-
-/* Media Query untuk skrin sangat kecil */
-@media (max-height: 600px) {
-    .dialer-container {
-        padding: 20px;
-        transform: scale(0.9);
-    }
-}
+.call-btn { color: #28a745; }
+.del-btn { color: #dc3545; font-size: 18px; }
